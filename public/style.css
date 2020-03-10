@@ -1,0 +1,186 @@
+/* GLOBAIS */
+html, body {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh;
+
+    /* MUDANDO FONT DO PROJETO */
+    font-family: roboto;
+    background-color: #f9f9f9;
+
+      /* corrigindo comportamente padrdao css */
+    box-sizing: border-box
+}
+
+/* TITULOS */
+header h1, main h2 {
+    margin-bottom: 70px;
+    }
+
+main h2 span{
+color: #ff4f4f;
+}
+
+H1, H2 {
+    color: black;
+}
+
+.form h2 {
+    text-align: right;
+    color: #ffffffee;
+    font-size: 20px;
+}
+
+/* ESTRUTURAS */
+header, main, footer {
+    text-align: center;
+}
+ 
+header, .form, main {
+    /* Espaçamento com margin */
+    margin: 0 auto 70px;
+
+    /* Limites dos elementos da pagina*/
+    width: 90%;
+    max-width: 500px;
+
+    }  
+
+/* HEADER */
+
+header button{
+    margin-top: 8px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: #ff4f4f;
+    color: black;
+    border: none;
+
+    font-weight: bold;
+}
+
+.logo {
+    width: 160px;
+    margin-top: 70px 0;
+    
+}
+
+header p {
+    font-size: 14px;
+}
+
+.form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 45px;
+        align-items: center;
+
+        background-color: #ff4f4f;
+
+        padding: 16px 64px ;
+
+        border-radius: 6px;
+    }
+    
+form input,
+form button {
+         /* largura */
+         width: 100%;
+         
+         /* Espaçamentos */
+         margin-bottom: 4px;
+    
+        /* preenchimento */
+        padding: 8px 16px;
+
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        border-bottom-left-radius: 4px;
+        
+        /* bordas */
+        border-radius: 4px;
+        border: 1px solid #ffffffee;
+    
+        }
+    
+.form input{
+
+    background-color: transparent;
+}
+
+.form input::placeholder{
+    color: #ffffffaa;
+}
+
+.form button{
+    font-weight: bold;
+}
+
+/* MAIN */
+main .donors {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+.blood {
+    color: brown;
+    font-weight: bold;
+    font-size: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+}
+
+.blood::before {
+    content: "";
+    background-color: #36343611;
+
+    width: 40px;
+    height: 40px;
+
+    position: absolute;
+    
+    /*Fazendo a Gotinha*/
+    border-radius: 50%;
+    border-top-right-radius: 0;
+
+    transform: rotate(-45deg);
+}
+
+.donors p{
+
+    margin-top: 24px;
+    font-size: 14px;
+    margin-bottom: 64px;
+}
+ footer {
+
+    margin-top: auto;
+    
+    padding-bottom: 16px;
+
+    border: 1px solid #eee;
+}
+
+/* FUNCIONALIDADES COM JAVASCRIPT*/
+
+section.form {
+    transition: all 300ms;
+}
+
+section.form.hide {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    margin-top: -70px;
+}
